@@ -7,10 +7,23 @@
 </head>
 <body>
     <script>
-        let login = prompt("Who's there?:");
+        let login = prompt("Who's there?");
 
-        if (login === "" || login === null) {
-            login = alert("Canceled") 
+        if (login === "Admin") {
+
+            let password = prompt("Password?");
+
+            if (password === "TheMaster") {
+                alert("Welcome!");
+            } else if (password === null) {
+                alert("Canceled");
+            } else {
+                alert("Wrong Password!");
+            }     
+        } else if (login === null || login === "") {
+            alert("Canceled");
+        } else {
+            alert("I don't know you")
         }
     </script>
 </body>
